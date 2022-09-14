@@ -618,20 +618,14 @@ a {
 }
 .plan .grafic-text {
   font-size: 13px;
-  text-align: right;
+  display: flex;
+  width: 502px;
+  justify-content: flex-end;
 }
 @media (max-width: 1023px) {
   .plan .grafic-text {
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-  .plan .grafic-text {
-    text-align: center;
-  }
-}
-@media (max-width: 449px) {
-  .plan .grafic-text {
+    display: block;
+    width: auto;
     text-align: center;
   }
 }
@@ -1024,6 +1018,11 @@ a {
   background-size: cover;
   z-index: 0;
 }
+@media (max-width: 767px) {
+  .meets {
+    min-height: 300px;
+  }
+}
 .meets::before {
   content: "";
   left: 0;
@@ -1174,6 +1173,7 @@ a {
 
 .solution {
   padding-bottom: 0;
+  margin-bottom: 32px;
 }
 .solution_wrapper {
   display: flex;
@@ -1198,13 +1198,18 @@ a {
 }
 @media (max-width: 767px) {
   .solution .left {
-    height: 589px;
+    height: 300px;
   }
 }
 .solution .inner-box {
   width: 100%;
   max-width: 458px;
   padding: 20px;
+}
+@media (max-width: 767px) {
+  .solution .inner-box {
+    padding: 30px;
+  }
 }
 .solution .right {
   display: flex;
@@ -1230,6 +1235,11 @@ a {
 #footer {
   background-color: #214e41;
   padding: 50px 0;
+}
+@media (max-width: 767px) {
+  #footer {
+    padding: 0;
+  }
 }
 #footer a {
   color: #fff;

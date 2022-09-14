@@ -7,6 +7,10 @@
   background-size: cover;
   z-index: 0;
 
+  @include media('<tablet') {
+    min-height: 300px;
+  }
+
   &::before {
     content: '';
     left: 0;
