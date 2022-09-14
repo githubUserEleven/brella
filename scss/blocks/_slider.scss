@@ -1,0 +1,61 @@
+.carousel {
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &_inner {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 50px;
+
+    @include media(">=tablet") {
+      display: flex;
+    }
+
+    .slick-list {
+      width: 1000px;
+      margin: 0 auto;
+    }
+  }
+
+  .slick-slide {
+    @include media("<tablet") {
+      width: 200px !important;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style-type: none;
+      margin: 0 10px;
+
+      button {
+        border: none;
+        background-color: rgb(0, 0, 0);
+        font-size: 0;
+        width: 7px;
+        height: 11px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

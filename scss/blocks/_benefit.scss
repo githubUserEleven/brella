@@ -1,0 +1,96 @@
+.benefit {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 640px;
+
+  .sub-title {
+    color: $primary-color;
+    margin-bottom: 23px;
+
+    @include media("<tablet") {
+      margin-bottom: 13px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .benefit-list {
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+    color: $light-green;
+    padding: 0;
+
+    @include media("<tablet") {
+      font-size: 20px;
+    }
+
+    @include media("<phone") {
+      font-size: 15px;
+    }
+
+    > li {
+      margin-bottom: 22px;
+
+      @include media("<tablet") {
+        margin-bottom: 12px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+
+    @include media("<desktop") {
+      width: 100%;
+    }
+  }
+
+  .inner-box {
+    width: 100%;
+    max-width: 458px;
+    padding: 20px 0;
+  }
+
+  .left {
+    // display: flex;
+    background-color: #e3eeed;
+    font-size: 32px;
+
+    img {
+      padding-left: 18px;
+    }
+  }
+
+  .right {
+    // display: flex;
+    background-color: $primary-color;
+    color: $white;
+
+    p {
+      font-size: 20px;
+      margin-bottom: 33px;
+      line-height: 1.7;
+
+      @include media("<tablet") {
+        font-size: 15px;
+        margin-bottom: 23px;
+      }
+
+      @include media("<phone") {
+        font-size: 13px;
+      }
+    }
+  }
+}

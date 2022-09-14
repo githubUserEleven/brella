@@ -1,0 +1,77 @@
+.meets {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 522px;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($white, .5);
+    z-index: -1;
+
+    @include media('<tablet') {
+      position: absolute;
+    }
+  }
+  
+
+  .meets_wrapper {
+    width: 40%;
+    margin-top: 20px;
+
+    @include media('<tablet') {
+      width: auto;
+    }
+  }
+
+  .sub-title {
+    font-weight: 700;
+    color: $light-green;
+    margin-bottom: 22px;
+
+    @include media('<tablet') {
+     margin-bottom: 17px;
+    }    
+  }
+
+  h2 {
+    margin-bottom: 34px;
+
+    @include media('<tablet') {
+      margin-bottom: 17px;
+    }
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 26px;
+
+    @include media('<tablet') {
+      color: #000;
+      margin-bottom: 18px;
+    }
+  }
+
+  .link {
+    text-align: center;
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+    }
+
+    .divider {
+      width: 98px;
+      height: 2px;
+      background-color: $primary-color;
+      margin: 14px auto 0 auto;
+    }
+  }
+}

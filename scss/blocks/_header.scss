@@ -1,0 +1,211 @@
+#header {
+  .right-box {
+    display: flex;
+  }
+
+  .holder-box {
+    .btn {
+      color: $white;
+      margin: 0;
+
+      @include media("<tablet") {
+        margin: 0 20px 0 20px;
+      }
+
+      @include media("<phone") {
+        font-size: 12px;
+        margin: 0 5px 0 5px;
+      }
+
+      @include media("<xs-phone") {
+        margin: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1362px;
+  font-size: 14px;
+  color: $primary-color;
+  padding: 25px 15px;
+  margin: 0 auto;
+
+  @include media("<425px") {
+    padding: 25px 5px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 10px;
+    font-size: 12px;
+    width: 26px;
+    height: 12px;
+    cursor: pointer;
+    z-index: 2;
+
+    @include media(">=tablet") {
+      display: none;
+    }
+
+    @include media("<tablet") {
+      margin: 0;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      margin-bottom: 6px;
+      transition: 0.5s all;
+    }
+
+    &_active {
+      span {
+        background: $white;
+        margin-bottom: -2px;
+
+        &:nth-child(1) {
+          transform: translateY(3px) rotate(-45deg);
+
+          @include media("<phone") {
+            transform: translateY(5px) rotate(-45deg);
+          }
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: translateY(3px) rotate(45deg);
+
+          @include media("<phone") {
+            transform: translateY(5px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    font-size: 30px;
+    text-decoration: none;
+
+    @include media("<tablet") {
+      font-size: 25px;
+    }
+
+    @include media("<425px") {
+      font-size: 20px;
+    }
+  }
+
+  li {
+    margin: 0 27px 0;
+    list-style-type: none;
+
+    @include media("<desktop") {
+      margin: 0 15px 0;
+    }
+
+    @include media("<tablet") {
+      margin: 25px 0 25px;
+    }
+
+    a {
+      @include media("<tablet") {
+        color: $white;
+      }
+    }
+  }
+
+  a {
+    @extend %underline;
+    text-decoration: none;
+  }
+
+  .login {
+    margin-right: 44px;
+    margin: 0 5px 0;
+
+    img {
+      @include media("<phone") {
+        display: none;
+      }
+    }
+
+    @include media("<phone") {
+      margin: 0;
+    }
+  }
+
+  #lang {
+    border: none;
+    font-weight: bold;
+    appearance: none;
+    cursor: pointer;
+
+    @include media("<tablet") {
+      margin: 0;
+    }
+
+    @include media("<phone") {
+      font-size: 12px;
+    }
+    @include media("<xs-phone") {
+      font-size: 10px;
+    }
+  }
+}
+
+.header_links {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+
+  @include media("<tablet") {
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    visibility: hidden;
+    opacity: 0;
+    left: -300px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.menu_active {
+  @include media("<tablet") {
+    overflow: hidden;
+  }
+
+  &:after {
+    @include media("<tablet") {
+      opacity: 1;
+    }
+  }
+
+  .header_links {
+    @include media("<tablet") {
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      z-index: 1;
+      margin: 0;
+    }
+  }
+}

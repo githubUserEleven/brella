@@ -1,0 +1,37 @@
+.about {
+
+  .container {
+    max-width: 1130px;
+  }
+
+  .col-3 {
+    width: 33.3%;
+    
+    @include media('<tablet') {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 30px; 
+    }
+  }
+
+  .sub-title {
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-bottom: 17px;
+  }
+
+  span {
+    color: $light-green;
+    font-size: 11px;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: $primary-color;
+    margin-top: 0;
+  }
+}

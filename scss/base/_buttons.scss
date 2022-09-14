@@ -1,0 +1,34 @@
+.btn {
+  @include animate(background);
+  display: inline-block;
+  border-radius: 5px;
+  color: $white;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 13px 15px;
+  font-family: "Raleway", sans-serif;
+
+  @include media("<phone") {
+    padding: 6px 10px;
+  }
+}
+
+.btn-primary {
+  background-color: $light-green;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.btn-md {
+  padding: 16px 25px;
+}
+
+.btn-lg {
+  border-radius: 0px 6px 6px 0px;
+  padding: 20px 35px;
+}
+
+

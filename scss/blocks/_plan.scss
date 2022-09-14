@@ -1,0 +1,224 @@
+.plan {
+  .container {
+    display: flex;
+
+    @include media("<widescreen") {
+      display: block;
+    }
+
+    @include media("<=tablet") {
+      flex-wrap: wrap;
+    }
+  }
+
+  .sub-title {
+    color: $light-green;
+    margin-bottom: 23px;
+
+    @include media("<tablet") {
+      margin-bottom: 15px;
+    }
+  }
+
+  .col {
+    padding: 0 15px;
+
+    &:first-child {
+      max-width: 574px;
+
+      @include media("<widescreen") {
+        max-width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 39px;
+
+    @include media("<tablet") {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 33px;
+    line-height: 29px;
+
+    @include media("<tablet") {
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .link {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include media("<tablet") {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .grafic-text {
+    font-size: 13px;
+    text-align: right;
+
+    @include media("<desktop") {
+      text-align: center;
+    }
+
+    @include media("<tablet") {
+      text-align: center;
+    }
+
+    @include media("<phone") {
+      text-align: center;
+    }
+  }
+
+  .divider {
+    width: 107px;
+    height: 2px;
+    background-color: $primary-color;
+    margin: 3px auto 0;
+  }
+
+  .number {
+    display: block;
+    position: relative;
+    font-size: 70px;
+    color: $primary-color;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-bottom: 33px;
+
+    @include media("<tablet") {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 95px;
+      width: 510px;
+      height: 2.5px;
+      background-color: $orange;
+
+      @include media("<desktop") {
+        width: 470px;
+      }
+
+      @include media("<tablet") {
+        display: none;
+      }
+    }
+  }
+
+  .cover {
+    font-weight: bold;
+    color: $primary-color;
+    width: 235px;
+    line-height: 23px;
+    margin-bottom: 20px;
+
+    @include media("<tablet") {
+      width: auto;
+    }
+  }
+
+  .graffics {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+    @include media("<desktop") {
+      justify-content: center;
+    }
+
+    @include media("<tablet") {
+      display: block;
+    }
+
+    .percent {
+      align-self: flex-end;
+      padding-left: 6px;
+      margin: 0 0 18px;
+
+      @include media("<tablet") {
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    .holder-grafic {
+      display: flex;
+      align-items: flex-end;
+
+      @include media("<tablet") {
+        justify-content: center;
+      }
+    }
+
+    .item {
+      .grafic-block {
+        max-width: 110px;
+        padding: 0 39px;
+
+        @include media("<tablet") {
+          padding: 0 20px;
+        }
+
+        a {
+          white-space: nowrap;
+          font-size: 13px;
+          margin-left: 7px;
+
+          @include media("<tablet") {
+            margin-left: 0;
+          }
+        }
+
+        span {
+          display: block;
+          margin-left: 10px;
+          font-size: 13px;
+        }
+      }
+
+      .block {
+        width: 77px;
+        background-color: $light-green;
+        margin-bottom: 27px;
+
+        @include media("<tablet") {
+          margin-bottom: 17px;
+        }
+      }
+
+      .graffic_block-1 {
+        height: 148px;
+
+        @include media("<tablet") {
+          width: 60px;
+          height: 100px;
+        }
+      }
+
+      .graffic_block-2 {
+        height: 300px;
+
+        @include media("<tablet") {
+          width: 70px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

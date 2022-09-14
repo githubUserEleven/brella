@@ -1,0 +1,85 @@
+.coverage {
+  .col-2 {
+    p {
+      line-height: 1.6;
+    }
+
+    @include media("<tablet") {
+      width: 100%;
+    }
+  }
+
+  .col-4 {
+    @include media("<tablet") {
+      text-align: center;
+      width: 50%;
+    }
+
+    @include media("<phone") {
+      width: 100%;
+    }
+  }
+
+  .sub-title {
+    color: $light-green;
+    font-weight: bold;
+    margin-bottom: 21px;
+
+    
+    @include media('<tablet') {
+      margin-bottom: 11px;
+    }
+  }
+
+  &_about {
+    margin-bottom: 34px;
+    
+    @include media('<tablet') {
+      margin-bottom: 24px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 36px;
+    
+    @include media('<tablet') {
+      margin-bottom: 20px;
+    }
+  }
+
+  .descr {
+    padding-top: 30px;
+
+    
+    @include media('<tablet') {
+      padding-top: 15px;
+    }
+
+    .descr_item {
+      font-weight: bold;
+
+    @include media('<tablet') {
+      margin-bottom: 20px;
+    }
+
+      .number {
+        font-family: "Roboto", sans-serif;
+        font-size: 60px;
+        color: $orange;
+        margin-bottom: 13px;
+
+        @include media("<tablet") {
+          font-size: 45px;
+        }
+      }
+
+      p {
+        font-family: "Raleway", sans-serif;
+        color: $primary-color;
+        font-size: 13px;
+        margin-top: 17px;
+        line-height: 1.6;
+      }
+    }
+  }
+}

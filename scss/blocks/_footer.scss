@@ -1,0 +1,209 @@
+#footer {
+  background-color: $primary-color;
+  padding: 50px 0;
+
+  a {
+    color: $white;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 688px;
+
+    @include media("<widescreen") {
+      min-height: 100%;
+    }
+  }
+
+  .footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 40px 0;
+
+    @include media("<desktop") {
+      display: block;
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    color: $white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+    margin-right: 43px;
+
+    @include media("<desktop") {
+      margin: 0;
+    }
+
+    @include media("<tablet") {
+      margin-bottom: 15px;
+    }
+  }
+
+  .links_wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 387px;
+
+    @include media("<desktop") {
+      display: flex;
+      justify-content: space-evenly;
+      width: auto;
+    }
+  }
+
+  .list {
+    display: flex;
+    width: 90%;
+
+    @include media("<desktop") {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .footer_nav {
+    margin: 0;
+    padding: 0;
+
+    @include media("<desktop") {
+      padding: 0 20px;
+    }
+    a {
+      @extend %underline;
+    } 
+  }
+
+  li {
+    list-style-type: none;
+    font-size: 16px;
+    padding: 11.5px 0;
+    color: $white;
+
+    @include media("<tablet") {
+      padding: 6px 0;
+    }
+  }
+
+  .bold {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  .second_bold {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+  }
+
+  .sub-title {
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $white;
+    margin: 0 0 14px 0;
+    line-height: 1.9;
+  }
+
+  .form_wrapper {
+    padding: 13px 0;
+
+    @include media("<desktop") {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .form {
+    display: flex;
+    margin-bottom: 33px;
+
+    @include media("<desktop") {
+      justify-content: center;
+    }
+
+    input {
+      background-color: $primary-color;
+      border: 1px solid #ffffff;
+      padding: 25px 0 4px 20px;
+      width: 301px;
+      height: 49px;
+      color: $white;
+      outline: none;
+
+      @include media("<desktop") {
+        padding: 25px 20px 10px 20px;
+      }
+    }
+
+    input::placeholder {
+      font-family: "Raleway", sans-serif;
+      color: $white;
+      font-weight: 400;
+    }
+
+    .btn {
+      color: $primary-color;
+      font-size: 18px;
+      padding: 0 18px 0;
+      height: 49px;
+      border-radius: 0;
+      cursor: pointer;
+    }
+  }
+
+  .social_list {
+    display: flex;
+    padding: 0;
+    margin: 0 -13px 12px;
+
+    @include media("<desktop") {
+      justify-content: center;
+    }
+
+    > li {
+      padding: 0 12px;
+
+      a {
+        @include animate(opacity);
+        margin: 0;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .descr_wrapper {
+    .content {
+      margin: 20px 0 40px;
+    }
+  }
+
+  .privacy {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $white;
+    padding-top: 45px;
+
+    a {
+      @extend %underline;
+    }
+  }
+}

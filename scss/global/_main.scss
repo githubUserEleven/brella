@@ -1,0 +1,142 @@
+$breakpoints: (
+  "xs-phone": 320px,
+  "phone": 450px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "widescreen": 1200px,
+);
+$media-expressions: (
+  "screen": "screen",
+  "print": "print",
+  "handheld": "handheld",
+  "landscape": "(orientation: landscape)",
+  "portrait": "(orientation: portrait)",
+  "retina2x":
+    "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
+  "retina3x":
+    "(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)",
+);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  color: $gray;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+
+  @include media("<tablet") {
+    font-size: 15px;
+  }
+
+  @include media("<phone") {
+    font-size: 13px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(black, 0.5);
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  margin-top: 0;
+  line-height: 1.4;
+
+  @include media("<desktop") {
+    line-height: 1.2;
+  }
+}
+
+h2 {
+  color: $primary-color;
+  font-size: 36px;
+  line-height: 1.27;
+
+  @include media("<tablet") {
+    font-size: 26px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 65px 0;
+
+  @include media("<desktop") {
+    padding: 45px 0;
+  }
+
+  @include media("<tablet") {
+    padding: 25px 0;
+  }
+}
+
+a {
+  // font-weight: bold;
+  color: $primary-color;
+}
+
+hr {
+
+  @include media('<tablet') {
+    display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*="col-"] {
+  position: relative;
+  padding: 0 15px;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.3%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.sub-title {
+  display: block;
+  font-size: 13px;
+
+  @include media("<phone") {
+    font-size: 10px;
+  }
+}
