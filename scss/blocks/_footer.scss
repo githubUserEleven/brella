@@ -1,9 +1,10 @@
 #footer {
+  color: $white;
   background-color: $primary-color;
   padding: 50px 0;
 
-  @include media("<tablet") {
-    padding: 0;
+  @include media("<desktop") {
+    padding: 25px 0;
   }
 
   a {
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 688px;
+    min-height: 651px;
 
     @include media("<widescreen") {
       min-height: 100%;
@@ -25,80 +26,77 @@
 
   .footer_wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid rgb(255, 255, 255);
-    padding: 40px 0;
-
-    @include media("<desktop") {
-      display: block;
-    }
+    padding: 40px 0 60px;
 
     @include media("<tablet") {
-      padding: 15px 0;
-    }
-  }
-
-  .logo {
-    display: inline-block;
-    color: $white;
-    text-decoration: none;
-    font-size: 40px;
-    font-weight: 500;
-    margin-right: 43px;
-
-    @include media("<desktop") {
-      margin: 0;
-    }
-
-    @include media("<tablet") {
-      font-size: 20px;
-      margin-bottom: 15px;
+      padding: 15px 0 0;
     }
   }
 
   .links_wrapper {
+    padding: 10px 15px;
+  }
+
+  .holder_nav {
     display: flex;
-    justify-content: space-around;
-    width: 387px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
 
     @include media("<desktop") {
-      display: flex;
-      justify-content: space-evenly;
-      width: auto;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 40px;
+      font-weight: 500;
+
+      @include media("<desktop") {
+        width: 100%;
+        text-align: center;
+      }
+
+      @include media("<tablet") {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
     }
   }
 
-  .list {
-    display: flex;
-    width: 90%;
+  .title_nav {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
 
     @include media("<desktop") {
-      display: block;
-      text-align: center;
-      width: 100%;
+      margin-bottom: 10px;
     }
   }
 
   .footer_nav {
+    font-size: 16px;
     margin: 0;
     padding: 0;
 
-    @include media("<desktop") {
-      padding: 0 20px;
+    li {
+      list-style-type: none;
+      margin-bottom: 23px;
+
+      @include media("<desktop") {
+        margin-bottom: 10px;
+      }
     }
+
     a {
       @extend %underline;
-    }
-  }
-
-  li {
-    list-style-type: none;
-    font-size: 16px;
-    padding: 11.5px 0;
-    color: $white;
-
-    @include media("<tablet") {
-      padding: 6px 0;
     }
   }
 
@@ -106,26 +104,22 @@
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
-    color: $white;
   }
 
   .second_bold {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
-    color: $white;
   }
 
   .sub-title {
-    color: $white;
     margin-bottom: 20px;
   }
 
   p {
     font-size: 14px;
-    color: $white;
     margin: 0 0 14px 0;
-    line-height: 1.9;
+    line-height: 1.71;
 
     @include media("<tablet") {
       line-height: 1.2;
@@ -134,11 +128,12 @@
   }
 
   .form_wrapper {
+    max-width: 355px;
     padding: 13px 0;
 
     @include media("<desktop") {
       text-align: center;
-      width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -149,6 +144,8 @@
 
     @include media("<desktop") {
       justify-content: center;
+      height: 40px;
+      margin-bottom: 25px;
     }
 
     input {
@@ -156,21 +153,12 @@
       background-color: $primary-color;
       border: 1px solid #ffffff;
       padding: 10px 15px;
-      color: $white;
       outline: none;
-
-      @include media("<desktop") {
-        padding: 25px 20px 10px 20px;
-      }
-
-      @include media("<tablet") {
-        height: 40px;
-      }
     }
 
     input::placeholder {
-      font-family: "Raleway", sans-serif;
       color: $white;
+      font-family: "Raleway", sans-serif;
       font-weight: 400;
     }
 
@@ -193,6 +181,7 @@
     }
 
     > li {
+      list-style-type: none;
       padding: 0 12px;
 
       a {
@@ -216,11 +205,16 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: $white;
     padding-top: 45px;
 
     @include media("<tablet") {
+      display: block;
+      text-align: center;
       padding: 0;
+    }
+
+    .col {
+      margin-bottom: 10px;
     }
 
     a {

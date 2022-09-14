@@ -1238,12 +1238,13 @@ a {
 }
 
 #footer {
+  color: #fff;
   background-color: #214e41;
   padding: 50px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #footer {
-    padding: 0;
+    padding: 25px 0;
   }
 }
 #footer a {
@@ -1255,7 +1256,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 688px;
+  min-height: 651px;
 }
 @media (max-width: 1199px) {
   #footer .container {
@@ -1264,103 +1265,92 @@ a {
 }
 #footer .footer_wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid rgb(255, 255, 255);
-  padding: 40px 0;
-}
-@media (max-width: 1023px) {
-  #footer .footer_wrapper {
-    display: block;
-  }
+  padding: 40px 0 60px;
 }
 @media (max-width: 767px) {
   #footer .footer_wrapper {
-    padding: 15px 0;
+    padding: 15px 0 0;
   }
 }
-#footer .logo {
+#footer .links_wrapper {
+  padding: 10px 15px;
+}
+#footer .holder_nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 500px;
+}
+@media (max-width: 1023px) {
+  #footer .holder_nav {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+#footer .holder_nav .logo {
   display: inline-block;
-  color: #fff;
   text-decoration: none;
   font-size: 40px;
   font-weight: 500;
-  margin-right: 43px;
 }
 @media (max-width: 1023px) {
-  #footer .logo {
-    margin: 0;
+  #footer .holder_nav .logo {
+    width: 100%;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
-  #footer .logo {
+  #footer .holder_nav .logo {
     font-size: 20px;
     margin-bottom: 15px;
   }
 }
-#footer .links_wrapper {
-  display: flex;
-  justify-content: space-around;
-  width: 387px;
+#footer .title_nav {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
 }
 @media (max-width: 1023px) {
-  #footer .links_wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    width: auto;
-  }
-}
-#footer .list {
-  display: flex;
-  width: 90%;
-}
-@media (max-width: 1023px) {
-  #footer .list {
-    display: block;
-    text-align: center;
-    width: 100%;
+  #footer .title_nav {
+    margin-bottom: 10px;
   }
 }
 #footer .footer_nav {
+  font-size: 16px;
   margin: 0;
   padding: 0;
 }
-@media (max-width: 1023px) {
-  #footer .footer_nav {
-    padding: 0 20px;
-  }
-}
-#footer li {
+#footer .footer_nav li {
   list-style-type: none;
-  font-size: 16px;
-  padding: 11.5px 0;
-  color: #fff;
+  margin-bottom: 23px;
 }
-@media (max-width: 767px) {
-  #footer li {
-    padding: 6px 0;
+@media (max-width: 1023px) {
+  #footer .footer_nav li {
+    margin-bottom: 10px;
   }
 }
 #footer .bold {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bold;
-  color: #fff;
 }
 #footer .second_bold {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
 }
 #footer .sub-title {
-  color: #fff;
   margin-bottom: 20px;
 }
 #footer p {
   font-size: 14px;
-  color: #fff;
   margin: 0 0 14px 0;
-  line-height: 1.9;
+  line-height: 1.71;
 }
 @media (max-width: 767px) {
   #footer p {
@@ -1369,12 +1359,13 @@ a {
   }
 }
 #footer .form_wrapper {
+  max-width: 355px;
   padding: 13px 0;
 }
 @media (max-width: 1023px) {
   #footer .form_wrapper {
     text-align: center;
-    width: 100%;
+    margin: 0 auto;
   }
 }
 #footer .form {
@@ -1385,6 +1376,8 @@ a {
 @media (max-width: 1023px) {
   #footer .form {
     justify-content: center;
+    height: 40px;
+    margin-bottom: 25px;
   }
 }
 #footer .form input {
@@ -1392,32 +1385,21 @@ a {
   background-color: #214e41;
   border: 1px solid #ffffff;
   padding: 10px 15px;
-  color: #fff;
   outline: none;
 }
-@media (max-width: 1023px) {
-  #footer .form input {
-    padding: 25px 20px 10px 20px;
-  }
-}
-@media (max-width: 767px) {
-  #footer .form input {
-    height: 40px;
-  }
-}
 #footer .form input::-moz-placeholder {
-  font-family: "Raleway", sans-serif;
   color: #fff;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 #footer .form input:-ms-input-placeholder {
-  font-family: "Raleway", sans-serif;
   color: #fff;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 #footer .form input::placeholder {
-  font-family: "Raleway", sans-serif;
   color: #fff;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 #footer .form .btn {
@@ -1438,6 +1420,7 @@ a {
   }
 }
 #footer .social_list > li {
+  list-style-type: none;
   padding: 0 12px;
 }
 #footer .social_list > li a {
@@ -1454,13 +1437,17 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  color: #fff;
   padding-top: 45px;
 }
 @media (max-width: 767px) {
   #footer .privacy {
+    display: block;
+    text-align: center;
     padding: 0;
   }
+}
+#footer .privacy .col {
+  margin-bottom: 10px;
 }
 .btn {
   transition: background 0.3s ease-in-out;
