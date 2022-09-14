@@ -81,10 +81,6 @@ img {
 .section {
   padding: 65px 0;
 
-  @include media("<desktop") {
-    padding: 45px 0;
-  }
-
   @include media("<tablet") {
     padding: 25px 0;
   }

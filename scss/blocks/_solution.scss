@@ -5,6 +5,10 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 577px;
+
+    @include media('<tablet') {
+      min-height: 564px;
+    }
   }
 
   .left,

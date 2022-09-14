@@ -1,13 +1,19 @@
 .plan {
   .container {
     display: flex;
+    flex-wrap: wrap;
+  }
 
-    @include media("<widescreen") {
-      display: block;
+  .col-2 {
+    @include media("<desktop") {
+      width: 100%;
     }
 
-    @include media("<=tablet") {
-      flex-wrap: wrap;
+    &:last-child {
+      @include media("<desktop") {
+        max-width: 500px;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -17,18 +23,6 @@
 
     @include media("<tablet") {
       margin-bottom: 15px;
-    }
-  }
-
-  .col {
-    padding: 0 15px;
-
-    &:first-child {
-      max-width: 574px;
-
-      @include media("<widescreen") {
-        max-width: 100%;
-      }
     }
   }
 
@@ -62,19 +56,6 @@
 
     a {
       text-decoration: none;
-    }
-  }
-
-  .grafic-text {
-    font-size: 13px;
-    display: flex;
-    width: 502px;
-    justify-content: flex-end;
-
-    @include media("<desktop") {
-      display: block;
-      width: auto;
-      text-align: center;
     }
   }
 
@@ -143,9 +124,8 @@
     }
 
     .percent {
-      align-self: flex-end;
       padding-left: 6px;
-      margin: 0 0 18px;
+      margin: 60px 0 18px;
 
       @include media("<tablet") {
         text-align: center;
@@ -155,59 +135,65 @@
 
     .holder-grafic {
       display: flex;
+      flex-wrap: wrap;
       align-items: flex-end;
+      max-width: 300px;
+      margin: 0 auto;
 
       @include media("<tablet") {
         justify-content: center;
       }
     }
 
-    .item {
-      .grafic-block {
-        max-width: 110px;
-        padding: 0 39px;
+    .grafic-block {
+      padding: 0 15px;
+
+      a {
+        white-space: nowrap;
+        font-size: 13px;
+        margin-left: 7px;
 
         @include media("<tablet") {
-          padding: 0 20px;
-        }
-
-        a {
-          white-space: nowrap;
-          font-size: 13px;
-          margin-left: 7px;
-
-          @include media("<tablet") {
-            margin-left: 0;
-          }
-        }
-
-        span {
-          display: block;
-          margin-left: 10px;
-          font-size: 13px;
+          margin-left: 0;
         }
       }
 
-      .block {
-        width: 77px;
-        background-color: $light-green;
-        margin-bottom: 27px;
+      span {
+        display: block;
+        margin-left: 10px;
+        font-size: 13px;
+      }
+    }
 
-        @include media("<tablet") {
-          margin-bottom: 17px;
-        }
+    .grafic-text {
+      width: 100%;
+  
+      font-size: 13px;
+
+      @include media('<tablet') {
+        text-align: center;
+      }
+    }
+
+    .block {
+      width: 77px;
+      background-color: $light-green;
+      margin-bottom: 27px;
+
+      @include media("<tablet") {
+        margin-bottom: 17px;
       }
 
-      .graffic_block-1 {
+      &.graffic_block-1 {
         height: 148px;
 
         @include media("<tablet") {
-          width: 60px;
+          width: 70px;
           height: 100px;
         }
       }
 
-      .graffic_block-2 {
+      &.graffic_block-2 {
         height: 300px;
 
         @include media("<tablet") {
